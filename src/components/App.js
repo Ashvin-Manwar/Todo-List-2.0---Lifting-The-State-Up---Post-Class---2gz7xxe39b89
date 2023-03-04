@@ -6,18 +6,16 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../styles/App.css';
 const App = () => {
    const [state, setState] = useState("INBOX");
-  function doChange(inp){
-     setState(inp);
-
+ 
   return (
     <div id="main">
     <Header />
       <div className='row'>
         <div className='col-md-2'>
-          <SideNav change={doChange}/>
+          <SideNav change={setActive}/>
         </div>
         <div className='col-md-10'>
-          <MainSection active = {state}/>
+          <MainSection active = {active}/>
         </div>
       </div>
     </div>
